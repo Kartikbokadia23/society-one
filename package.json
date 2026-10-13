@@ -1,0 +1,13 @@
+{
+  "name": "societyone",
+  "private": true,
+  "workspaces": ["shared", "api", "mobile"],
+  "scripts": {
+    "build": "npm run build -w shared && npm run build -w api",
+    "typecheck": "npm run build -w shared && npm run typecheck -w api && npm run typecheck -w mobile",
+    "test": "npm run build -w shared && npm test -w api && npm test -w mobile",
+    "migrate": "npm run migrate -w api",
+    "start:api": "npm start -w api",
+    "start:mobile": "npm start -w mobile"
+  }
+}
