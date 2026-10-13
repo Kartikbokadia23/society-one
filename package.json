@@ -1,0 +1,13 @@
+{
+  "name": "society-one",
+  "private": true,
+  "workspaces": ["shared", "api", "mobile"],
+  "scripts": {
+    "build:shared": "npm run build -w @societyone/shared",
+    "build": "npm run build:shared && npm run build -w @societyone/api",
+    "test": "npm run build:shared && npm test -w @societyone/api && npm test -w @societyone/mobile",
+    "migrate": "npm run migrate -w @societyone/api",
+    "start:api": "npm start -w @societyone/api",
+    "start:mobile": "npm start -w @societyone/mobile"
+  }
+}
