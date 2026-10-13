@@ -1,0 +1,14 @@
+{
+  "name": "society-one",
+  "private": true,
+  "version": "0.1.0",
+  "workspaces": ["shared", "api", "mobile"],
+  "scripts": {
+    "test": "npm run test --workspaces --if-present",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "build": "npm run build --workspace api",
+    "migrate": "npm run migrate --workspace api",
+    "start:api": "npm run start --workspace api",
+    "start:mobile": "npm run start --workspace mobile"
+  }
+}
